@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 200px 5fr;
+}
+
+nav.sidebar {
+    background-color: rgb(90, 90, 224);
+    color: white;
+    grid-area: 1 / 1 / 3/ 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    /* flex-direction: column; */
+}
+
+.sidebar-header {
+    align-self: flex-start;
+    padding-left: 12%;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+svg {
+    width: 25px;
+    fill: white;
+}
+
+.sidebar-header svg {
+    width: 40px;
+}
+
+.sidebar-items {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sidebar-items li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.sidebar-items a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+
+/*Used to align the sidebar text with their logo*/
+.align-center {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+
+
+main {
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 2fr;
+}
+
+main>.projects {
+    grid-row: 1 / 3;
+
+}
+
+main>.anouncement {
+    background-color: green;
+}
+
+main>.trending {
+    background-color: orange;
+}
+
+header {
+    background-color: red;
+}
+
+main {
+    background-color: yellow;
+}
+
+
+
+
+.content {
+    background-color: gray;
+}
