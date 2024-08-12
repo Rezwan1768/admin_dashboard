@@ -8,9 +8,10 @@
 
 body {
     display: grid;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 175px 5fr;
     grid-template-columns: 200px 5fr;
     font-family: 'Roboto', sans-serif;
+   
 }
 
 nav.sidebar {
@@ -72,7 +73,9 @@ header {
     align-items: center;
     row-gap: 15px;
     padding: 10px 40px;
-    box-shadow: 2 2px 5px black;
+    position: relative;
+    box-shadow: 0 2px 10px black;
+    /* margin-bottom: 5px; */
 }
 
 header svg {
@@ -95,7 +98,7 @@ header>form input {
     width: 80%;
     height: 25px;
     border-radius: 15px;
-    background-color: rgb(230, 234, 238);
+    background-color: azure;
     padding-left: 10px;
     font-size: 18px;
     box-shadow: 0 2px 5px black;
@@ -163,32 +166,91 @@ header .buttons {
 /* Main section */
 
 main {
+    padding: 20px;
+    background-color: azure;
     display: grid;
-    grid-template: 1fr 1fr / 3fr 2fr;
+    grid-template: 1fr 1fr / 3fr 1fr;
+    gap: 20px;
 }
 
-main>.projects {
+.project-section {
     grid-row: 1 / 3;
-
 }
 
-main>.anouncement {
-    background-color: green;
+main h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
-main>.trending {
-    background-color: orange;
+.projects {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: rgb(213, 229, 242);
+    font-size: 18px;
+    padding: 20px;
+    border-left: 10px solid rgb(90, 90, 224);
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card svg {
+    width: 25px;
+}
+
+.card .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+/* Main announcement section*/
+.anouncement-list {
+    background-color: rgb(213, 229, 242);
+    display: grid;
+    row-gap: 10px;
+    padding: 10px 25px 25px;
+}
+
+.anouncement-list .anouncement:not(:last-child) {
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+}
+
+.anouncement-list .anouncement:last-child {
+    padding-top: 15px;
+}
+
+.anouncement {
+    margin-top: 5px;
+}
+
+.trending-lizards {
+    align-self: end;
 }
 
 
-
-main {
-    background-color: yellow;
+.trending-lizards>ul {
+    background-color: rgb(213, 229, 242);
+    padding: 20px;
 }
 
+.trending-lizards>ul>li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+} 
 
-
-
-.content {
-    background-color: gray;
+.trending-lizards>ul>li h3 {
+    margin-bottom: 5px;
 }
